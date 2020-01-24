@@ -1,13 +1,15 @@
 // ./style.css
 
+@import './grids.scss';
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,700|Princess+Sofia');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,500,700|Princess+Sofia');
 
-$font-body: 'Lato', sans-serif;
+$font-body: 'Open Sans', sans-serif;
 $font-display : 'Princess Sofia', serif;
 
 $c-interaction : #1A8780 ;
 $c-text : #2D161E ;
+$c-text-heading : #39586D;
 $c-accent : #CF5430 ;
 $c-tint : #C9D2D9 ;
 
@@ -31,7 +33,7 @@ $c-interaction-l: lighten($c-interaction, 45); //#D0EBF4;
 
 html { font-size:20px; }
 
-body { font: 200 1rem /1.6 $font-body; color: $c-text; background-color: $c-tint;}
+body { font: 300 1rem /1.6 $font-body; color: $c-text; background-color: #fff ; margin:0; padding:0; }
 
 :focus {
   outline: 2px solid $c-interaction-l;
@@ -39,15 +41,44 @@ body { font: 200 1rem /1.6 $font-body; color: $c-text; background-color: $c-tint
   transition:outline-offset 0.1s ease-in-out, outline 0.1s ease-in-out;
 }
 
-.hero {  font: 300 2rem /1.05 $font-display; text-align:center;}
-h1 {  font: 300 2rem /1.4 $font-display; }
-h1 small { font: 400 0.8rem/1.2 $font-body; text-transform: uppercase; letter-spacing: 3px; }
-h2 {  font: 300 1.6rem /1.5 $font-display; }
-h3, .strong {  font: 700 1rem /1.2 $font-body; }
+.hero {
+  font: 300 2rem /1.05 $font-display;
+  text-align: center;
+
+  background : url("./images/teodor-drobota-unsplash.jpg") no-repeat 0 -836px ;
+  padding-bottom: 64px;
+}
+
+.hero-container {
+  width: 400px;
+  margin: auto;
+  padding: 0;
+
+  border-style: dotted;
+  border-color: #fff;
+  border-image-source: url(./images/scallop-border.svg);
+  border-image-slice: 33% 33%;
+  border-image-repeat: round;
+  border-width: 10px;
+}
+
+.hero-container div {
+  padding: 32px;
+  background: #fff;
+  margin: -5px;
+  margin-top: -10px;
+}
+
+h1, h2, h3 { text-align: center; color : $c-text-heading; }
+
+h1 {  font: 300 3rem /1.4 $font-display;}
+h1 small { font: 300 1rem/1.2 $font-body; text-transform: uppercase; letter-spacing: 3px; }
+h2 {  font: 300 3rem /1.5 $font-display; text-transform: lowercase; }
+h3 {  font: 300 1rem /1.2 $font-body; text-transform: uppercase;  letter-spacing: 2px; }
 p {
   font: 300 1rem/1.2 $font-body;
   font-style: italic;
-  letter-spacing: 0.01px;
+  letter-spacing: 0.3px;
 }
 a {
   font-weight:700;
@@ -65,18 +96,63 @@ blockquote::before {
   z-index:-10;
 }
 
-button {
+hr {
+  border-style: dotted;
+  border-color: $c-grey-60;
+  position: relative;
+  margin: 48px 0;
+  overflow: visible;
+}
+hr:after {
+  background: #fff url(./images/maple-leaf.svg) no-repeat top center;
+  padding: 16px;
+  position: absolute;
+  top: -20px;
+  left: 43%;
+  content: ' ';
+  width: 20px;
+  height: 9px;
+}
+
+nav {
+  background-color : #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: $base*3;
+}
+
+nav ul {
+  list-style-type: none;
+  margin:0; padding: 0;
+  display: flex;
+}
+
+nav ul li a {
+  padding: $base $base*3;
+  font: 300 1rem $font-body;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+nav ul li.pull-right {
+  flex: 1;
+  text-align: right;
+}
+
+button, .button {
   border:2px solid $c-interaction;
   background-color:$c-interaction;
   border-radius:100px;
   color:$c-grey-100;
   font: 500 1em $font-body;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing:1.01px;
   padding: $base 3*$base;
   transition: box-shadow 0.2s ease-in-out;
   &:hover {
     box-shadow:0 0 0 3px $c-interaction-l;
+    color: #fff;
   }
   &:focus {
     outline:0;
@@ -85,7 +161,7 @@ button {
   }
 }
 
-button.primary {
+button.primary, .button.primary {
   background-color: $c-grey-00;
   border-color: $c-grey-00;
   &:hover, &:focus { background-color: $c-interaction-d ; border-color: $c-interaction-d; }
@@ -93,4 +169,10 @@ button.primary {
 
 a.action {
   white-space:nowrap;
+}
+
+.visually-hidden {display:none; }
+
+section.bg-tint {
+  background-color : $c-tint ;
 }

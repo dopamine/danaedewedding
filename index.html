@@ -3,14 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" media="screen" href="./style.css" />
+  <script type="text/javascript" src="./src/countdown.js"></script>
   <title>Dana &amp; Ede esküvője</title>
 </head>
-<body class="">
-  <body translate="no" >
-    <h1 class="">Dana &amp; Ede <small>esküvője</small></h1>
+<body>
+  <section class="hero">
+    <div class="hero-container">
+      <div>
+        <h1 class="">
+          Dana &amp; Ede <br>
+          <small>esküvője</small>
+        </h1>
+        <hr>
+        <h3>2020 október 10</h3>
+      </div>
+    </div>
+  </section>
+
+  <nav>
+    <ul>
+      <li><a href="#top">Rólunk</a></li>
+      <li><a href="#nagynap">A nagy nap</a></li>
+      <li><a href="#nagynap">Helyszín</a></li>
+      <li><a href="#ajandek">Ajándékozás</a></li>
+      <li class="pull-right"><a class="button" href="#rsvp">Visszajelzés</a></li>
+    </ul>
+  </nav>
+
+  <section id="top">
+    <h2 class="visually-hidden">Visszaszámlálás</h2>
+
+      <div id="clockdiv">
+        <div>
+          <span class="months"></span>
+          <div class="smalltext">hónap</div>
+        </div>
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">nap</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">óra</div>
+        </div>
+      </div>
+  </section>
+  <section>
+    <h2>Egybekelünk!</h2>
+
+  </section>
+  <section class="bg-tint">
+    <h2>Történetünk</h2>
+      <dl>
+        <dt>Találkoztunk</dt>
+        <dd>2008.03.14.</dd>
+
+        <dt>Összejöttünk</dt>
+        <dd>2008.10.10.</dd>
+
+        <dt>Összeköltöztünk</dt>
+        <dd>2014.06.07.</dd>
+
+        <dt>Lánykérés</dt>
+        <dd>2018.03.18.</dd>
+
+        <dt>Esküvő</dt>
+        <dd>2020.10.10.</dd>
+      </dl>
+  </section>
+
+  <section id="nagynap">
+    <h2>A nagy nap</h2>
+    <dl>
+      <dt>15:30</dt>
+      <dd>Érkezés és állófogadás</dd>
+
+      <dt>16:00</dt>
+      <dd>Szertartás</dd>
+
+      <dt>17:00</dt>
+      <dd>Fotók, csokordobás</dd>
+
+      <dt>18:00</dt>
+      <dd>Vacsora</dd>
+
+      <dt>19:30</dt>
+      <dd>Buli hajnalig</dd>
+    </dl>
+  </section>
+
+  <section class="bg-tint" id='helyszin'>
+    <h2>Helyszín</h2>
+    <img src="./images/csillagkert-fotok.png" alt="">
+    <p>
+      <strong>Csillagkert Eseményközpont</strong>
+      1029 Budapest (Adyliget), Feketefej u. 2. <br>
+      +36 30 842 4584
+    </p>
+    <a class="button" href="#" target="_new">Útvonaltervezés</a>
+  </section>
+  <section class="map">
+    [ térkép ]
+  </section>
+
+  <section id='ajandek'>
+    <h2>Ajándékozás</h2>
+    <section>
+      <h3>Nászajándék</h3>
+      <p>
+        Izlandi nászútunkra gyűjtünk. Ha szeretnél hozzájárulni, megköszönjük.
+      </p>
+    </section>
+    <section>
+      <h3>Menyecsketánc</h3>
+      <p>
+        Ne készülj pénzzel, hozz inkább egy sorsjegyet!
+      </p>
+    </section>
+  </section>
+
+  <section id="rsvp">
+    <h2>Visszajelzés</h2>
+    <form action="#">
+      <div>
+        <label for="nev">Név</label><br>
+        <input id='nev' type="text" name="nev">
+      </div>
+
+      <div>
+        <input id='rsvp-yes' type="radio" name="rsvp">
+        <label for="rsvp-yes">Mindenképp ott leszek</label>
+        <br>
+        <input id='rsvp-no' type="radio" name="rsvp">
+        <label for="rsvp-no">Sajnos nem tudok eljönni</label>
+      </div>
 
 
+      <div>
+        <label for="">Egy kísérőt is hozok</label><br>
+        <input id='p1-yes' type="radio" name="p1">
+        <label for="p1-yes">Igen</label>
 
+        <input id='p1-no' type="radio" name="p1">
+        <label for="p1-no">Nem</label>
+      </div>
+
+      <div>
+        <label for="nev">Üzenet</label><br>
+        <textarea name="uzenet" id="uzi" cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <label for="dal">Dalkérés</label><br>
+        <input id='dal' type="text">
+      </div>
+
+      <input type="submit" value="Küldés!">
+
+    </form>
+  </section>
 </body>
 
 </html>

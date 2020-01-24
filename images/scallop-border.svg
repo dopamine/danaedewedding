@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>scallop-border</title>
+    <g id="scallop-border" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
+        <circle id="Oval-Copy" fill="#FFFFFF" cx="150" cy="50" r="50"></circle>
+        <circle id="Oval-Copy-2" fill="#FFFFFF" cx="250" cy="50" r="50"></circle>
+        <circle id="Oval-Copy-3" fill="#FFFFFF" cx="250" cy="150" r="50"></circle>
+        <circle id="Oval-Copy-4" fill="#FFFFFF" cx="250" cy="250" r="50"></circle>
+        <circle id="Oval-Copy-5" fill="#FFFFFF" cx="150" cy="250" r="50"></circle>
+        <circle id="Oval-Copy-6" fill="#FFFFFF" cx="50" cy="250" r="50"></circle>
+        <circle id="Oval-Copy-7" fill="#FFFFFF" cx="50" cy="150" r="50"></circle>
+    </g>
+</svg>

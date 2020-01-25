@@ -6,7 +6,7 @@
   <script type="text/javascript" src="./src/countdown.js"></script>
   <title>Dana &amp; Ede esküvője</title>
 </head>
-<body>
+<body id="top">
   <section class="hero">
     <div class="hero-container">
       <div>
@@ -22,7 +22,9 @@
 
   <nav>
     <ul>
-      <li><a href="#top">Rólunk</a></li>
+      <li><a href="#top">
+        <img src="./images/maple-leaf.svg" width="24" height="24" alt="Home">
+      </a></li>
       <li><a href="#nagynap">A nagy nap</a></li>
       <li><a href="#nagynap">Helyszín</a></li>
       <li><a href="#ajandek">Ajándékozás</a></li>
@@ -30,27 +32,39 @@
     </ul>
   </nav>
 
-  <section id="top">
+  <section>
     <h2 class="visually-hidden">Visszaszámlálás</h2>
 
       <div id="clockdiv">
         <div>
-          <span class="months"></span>
-          <div class="smalltext">hónap</div>
+          <span class="cd-number months"></span>
+          <div class="cd-label">hónap</div>
         </div>
         <div>
-          <span class="days"></span>
-          <div class="smalltext">nap</div>
+          <span class="cd-number days"></span>
+          <div class="cd-label">nap</div>
         </div>
         <div>
-          <span class="hours"></span>
-          <div class="smalltext">óra</div>
+          <span class="cd-number hours"></span>
+          <div class="cd-label">óra</div>
         </div>
       </div>
   </section>
   <section>
-    <h2>Egybekelünk!</h2>
-
+    <h2 class="visually-hidden">Egybekelünk!</h2>
+    <div class="row">
+      <div class="col-6 offset-2">
+        <p>
+          Lórum ipse mindaddig jól haladol, míg meg nem emeldet egy gyatós és kilmi körpes. A csörny szcicatakor a golyék zsintevő jegyesége után az ütesben lihles szárkodik létre és hantsa a golyékot a sölt fákságban. A csörny nedenével.
+        </p><p>
+          Szeretettel várunk,<br>
+          Dana és Ede
+        </p>
+      </div>
+      <div class="col-4">
+        <img src="./images/polaroid.png" alt="Szalagavatós kép Danáról és Edéről, 2010-böl" width="240">
+      </div>
+    </div>
   </section>
   <section class="bg-tint">
     <h2>Történetünk</h2>
@@ -94,16 +108,31 @@
 
   <section class="bg-tint" id='helyszin'>
     <h2>Helyszín</h2>
-    <img src="./images/csillagkert-fotok.png" alt="">
-    <p>
-      <strong>Csillagkert Eseményközpont</strong>
-      1029 Budapest (Adyliget), Feketefej u. 2. <br>
-      +36 30 842 4584
-    </p>
-    <a class="button" href="#" target="_new">Útvonaltervezés</a>
+    <div class="row">
+      <div class="col">
+        <img align="right" src="./images/csillagkert-fotok.png" alt="">
+      </div>
+      <div class="col">
+        <p>
+          <strong>Csillagkert Eseményközpont</strong>
+        </p>
+        <p>
+          <a href="https://csillagkertbudapest.hu/">https://csillagkertbudapest.hu/</a>
+        </p>
+        <p>
+          1029 Budapest (Adyliget), Feketefej u. 2. <br>
+          +36 30 842 4584
+        </p>
+        <p>
+          <a class="button" href="https://www.google.hu/maps/dir//Budapest,+Petneh%C3%A1zy+Hussar+Tavern,+Feketefej+u.+2,+1029+Hungary/@47.5415261,18.9357499,17z/data=!4m16!1m6!3m5!1s0x4741d8aafc527f7f:0x301860df9990f580!2sPetneh%C3%A1zy+Hussar+Tavern!8m2!3d47.5415261!4d18.9357499!4m8!1m0!1m5!1m1!1s0x4741d8aafc527f7f:0x301860df9990f580!2m2!1d18.9357499!2d47.5415261!3e3?hl=hu" target="_new">Útvonaltervezés</a>
+        </p>
+      </div>
+    </div>
+
+
   </section>
   <section class="map">
-    [ térkép ]
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.3495026128767!2d18.935749899999998!3d47.541526100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d8aafc527f7f%3A0x301860df9990f580!2sPetneh%C3%A1zy%20Hussar%20Tavern!5e0!3m2!1sen!2suk!4v1579949266620!5m2!1shu!2shu" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
   </section>
 
   <section id='ajandek'>

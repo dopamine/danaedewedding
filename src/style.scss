@@ -81,8 +81,10 @@ p {
   letter-spacing: 0.3px;
 }
 a {
-  font-weight:700;
-  color:$c-text;
+  font-weight:500;
+  text-decoration: underline;
+  font-style: normal;
+  color:$c-interaction;
   &:hover {color:$c-interaction;}
   &:focus {transition:outline-offset 0.1s ease-in-out; }
 }
@@ -175,4 +177,28 @@ a.action {
 
 section.bg-tint {
   background-color : $c-tint ;
+}
+
+
+#clockdiv {
+    font-size:2em;
+    display: flex;
+    margin:32px auto;
+    width:400px;
+}
+
+#clockdiv div {
+    margin: 0 24px;
+    text-align: center;
+}
+.cd-number {
+  font-family: $font-display;
+}
+.cd-label  {
+    font:0.5em $font-body;
+    color: $c-text-heading;
+}
+
+.finalText {
+
 }

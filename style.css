@@ -214,8 +214,10 @@ p {
 }
 
 a {
-  font-weight: 700;
-  color: #2D161E;
+  font-weight: 500;
+  text-decoration: underline;
+  font-style: normal;
+  color: #1A8780;
 }
 
 a:hover {
@@ -335,4 +337,25 @@ a.action {
 
 section.bg-tint {
   background-color: #C9D2D9;
+}
+
+#clockdiv {
+  font-size: 2em;
+  display: flex;
+  margin: 32px auto;
+  width: 400px;
+}
+
+#clockdiv div {
+  margin: 0 24px;
+  text-align: center;
+}
+
+.cd-number {
+  font-family: "Princess Sofia", serif;
+}
+
+.cd-label {
+  font: 0.5em "Open Sans", sans-serif;
+  color: #39586D;
 }

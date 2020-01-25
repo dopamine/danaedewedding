@@ -201,6 +201,11 @@ h2 {
   text-transform: lowercase;
 }
 
+h2.section-pullup {
+  position: relative;
+  top: -36px;
+}
+
 h3 {
   font: 300 1rem/1.2 "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -333,6 +338,11 @@ a.action {
 
 .visually-hidden {
   display: none;
+}
+
+section {
+  padding-bottom: 24px;
+  padding: 0 20% 24px;
 }
 
 section.bg-tint {

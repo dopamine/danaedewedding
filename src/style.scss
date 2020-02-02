@@ -2,7 +2,7 @@
 
 @import './grids.scss';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,500,700|Princess+Sofia');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Princess+Sofia');
 
 $font-body: 'Open Sans', sans-serif;
 $font-display : 'Princess Sofia', serif;
@@ -19,6 +19,7 @@ $base : 8px;
 $c-grey-00 : #000;
 $c-grey-10 : #333;
 $c-grey-20 : #666 ;
+$c-grey-50 : lighten($c-text-heading, 40) ;
 $c-grey-60 : #ddd ;
 $c-grey-80 : #f6f6f6 ;
 $c-grey-100: #fff ;
@@ -77,6 +78,7 @@ h2 {  font: 300 3rem /1.5 $font-display; text-transform: lowercase; }
 h2.section-pullup {
   position: relative;
   top: -36px;
+  margin-bottom:0;
 }
 h3 {  font: 300 1rem /1.2 $font-body; text-transform: uppercase;  letter-spacing: 2px; }
 p {
@@ -85,7 +87,7 @@ p {
   letter-spacing: 0.3px;
 }
 a {
-  font-weight:500;
+  font-weight:600;
   text-decoration: underline;
   font-style: normal;
   color:$c-interaction;
@@ -110,7 +112,7 @@ hr {
   overflow: visible;
 }
 hr:after {
-  background: #fff url(./images/maple-leaf.svg) no-repeat top center;
+  background: #fff url(./images/maple-leaf-accent.svg) no-repeat top center;
   padding: 16px;
   position: absolute;
   top: -20px;
@@ -129,28 +131,40 @@ nav {
 nav ul {
   list-style-type: none;
   margin:0; padding: 0;
-  display: flex;
+  text-align: center;
+  @media screen and (min-width : $bp-mobile) {
+    display: flex;
+  }
 }
 
 nav ul li a {
   padding: $base $base*3;
+  display:inline-block;
   font: 300 1rem $font-body;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.3px;
+  @media screen and (min-width : $bp-mobile) {
+    margin: 0;
+  }
+}
+nav ul li a:hover {
+  background-color: $c-grey-80;
 }
 
-nav ul li.pull-right {
-  flex: 1;
-  text-align: right;
+@media screen and (min-width : $bp-mobile) {
+  nav ul li.pull-right {
+    flex: 1;
+    text-align: right;
+  }
 }
 
-button, .button {
+button, .button, input[type=submit] {
   border:2px solid $c-interaction;
   background-color:$c-interaction;
   border-radius:100px;
   color:$c-grey-100;
-  font: 500 1em $font-body;
+  font: 600 1em $font-body;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing:1.01px;
@@ -159,6 +173,7 @@ button, .button {
   &:hover {
     box-shadow:0 0 0 3px $c-interaction-l;
     color: #fff;
+    background: $c-interaction;
   }
   &:focus {
     outline:0;
@@ -181,12 +196,22 @@ a.action {
 
 section {
   padding-bottom: 24px;
-  padding:0 20% 24px;
+  padding:0 20% 48px;
+}
+
+section.wide {
+  padding: 0 5% 48px;
+}
+section.fullbleed {
+  padding: 0;
 }
 
 section.bg-tint {
   background-color : $c-tint ;
 }
+
+.text-center { text-align: center; }
+.text-column { padding: 16px; }
 
 
 #clockdiv {
@@ -194,6 +219,7 @@ section.bg-tint {
     display: flex;
     margin:32px auto;
     width:400px;
+    color: $c-text-heading;
 }
 
 #clockdiv div {
@@ -210,4 +236,92 @@ section.bg-tint {
 
 .finalText {
 
+}
+
+
+#timeline {
+  border-bottom : 3px dotted rgba(0,0,0,0.2);
+  @media screen and (min-width : $bp-mobile) {
+    display: flex;
+  }
+}
+
+
+#timeline div {
+  position: relative;
+  padding-left: 64px;
+  margin-bottom: 24px;
+  color: $c-text-heading;
+  font-size:0.8rem;
+  @media screen and (min-width : $bp-mobile) {
+    flex: 1;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    height: 240px;
+    padding-left: 16px;
+    margin-left:40px ;
+    border-left : 1px solid $c-grey-50;
+  }
+}
+
+
+#timeline div:before {
+  background: transparent url(./images/maple-leaf-accent.svg) no-repeat top center;
+  padding: 16px;
+  content: ' ';
+  width: 20px;
+  height: 9px;
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  @media screen and (min-width : $bp-mobile) {
+    top: auto;
+    bottom: -24px;
+    left: -28px;
+  }
+}
+
+#timeline div:first-child {
+  margin-left: 0px;
+}
+
+#timeline div dt {
+  font-weight: 300;
+  text-transform: uppercase;
+  display: block;
+}
+#timeline div dd {
+  font-weight: 600;
+  display: block;
+  margin: 0;
+}
+
+
+
+input, textarea {
+  padding:$base;
+  border: 1px solid $c-text;
+  border-radius:8px;
+  font:1.2rem $font-body;
+}
+
+#visszajelzes div.field {
+  margin-bottom:32px;
+}
+
+
+#program dt,dd {
+  display: inline-block;
+}
+#program dt {
+  width: 40%;
+  @media screen and (min-width : $bp-mobile) {
+      text-align : right;
+  }
+}
+#program dd {
+  width: 50%;
 }

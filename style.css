@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,500,700|Princess+Sofia");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Princess+Sofia");
 .row {
   display: flex;
 }
@@ -204,6 +204,7 @@ h2 {
 h2.section-pullup {
   position: relative;
   top: -36px;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -219,7 +220,7 @@ p {
 }
 
 a {
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: underline;
   font-style: normal;
   color: #1A8780;
@@ -262,7 +263,7 @@ hr {
 }
 
 hr:after {
-  background: #fff url(./images/maple-leaf.svg) no-repeat top center;
+  background: #fff url(./images/maple-leaf-accent.svg) no-repeat top center;
   padding: 16px;
   position: absolute;
   top: -20px;
@@ -282,28 +283,47 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+  nav ul {
+    display: flex;
+  }
 }
 
 nav ul li a {
   padding: 8px 24px;
+  display: inline-block;
   font: 300 1rem "Open Sans", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.3px;
 }
 
-nav ul li.pull-right {
-  flex: 1;
-  text-align: right;
+@media screen and (min-width: 760px) {
+  nav ul li a {
+    margin: 0;
+  }
 }
 
-button, .button {
+nav ul li a:hover {
+  background-color: #f6f6f6;
+}
+
+@media screen and (min-width: 760px) {
+  nav ul li.pull-right {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+button, .button, input[type=submit] {
   border: 2px solid #1A8780;
   background-color: #1A8780;
   border-radius: 100px;
   color: #fff;
-  font: 500 1em "Open Sans", sans-serif;
+  font: 600 1em "Open Sans", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1.01px;
@@ -311,12 +331,13 @@ button, .button {
   transition: box-shadow 0.2s ease-in-out;
 }
 
-button:hover, .button:hover {
+button:hover, .button:hover, input[type=submit]:hover {
   box-shadow: 0 0 0 3px #9bece7;
   color: #fff;
+  background: #1A8780;
 }
 
-button:focus, .button:focus {
+button:focus, .button:focus, input[type=submit]:focus {
   outline: 0;
   box-shadow: 0 0 0 3px #9bece7, inset 0 2px 0 0 rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease-in-out;
@@ -342,11 +363,27 @@ a.action {
 
 section {
   padding-bottom: 24px;
-  padding: 0 20% 24px;
+  padding: 0 20% 48px;
+}
+
+section.wide {
+  padding: 0 5% 48px;
+}
+
+section.fullbleed {
+  padding: 0;
 }
 
 section.bg-tint {
   background-color: #C9D2D9;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-column {
+  padding: 16px;
 }
 
 #clockdiv {
@@ -354,6 +391,7 @@ section.bg-tint {
   display: flex;
   margin: 32px auto;
   width: 400px;
+  color: #39586D;
 }
 
 #clockdiv div {
@@ -368,4 +406,99 @@ section.bg-tint {
 .cd-label {
   font: 0.5em "Open Sans", sans-serif;
   color: #39586D;
+}
+
+#timeline {
+  border-bottom: 3px dotted rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 760px) {
+  #timeline {
+    display: flex;
+  }
+}
+
+#timeline div {
+  position: relative;
+  padding-left: 64px;
+  margin-bottom: 24px;
+  color: #39586D;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 760px) {
+  #timeline div {
+    flex: 1;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    height: 240px;
+    padding-left: 16px;
+    margin-left: 40px;
+    border-left: 1px solid #a3bdcf;
+  }
+}
+
+#timeline div:before {
+  background: transparent url(./images/maple-leaf-accent.svg) no-repeat top center;
+  padding: 16px;
+  content: ' ';
+  width: 20px;
+  height: 9px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 760px) {
+  #timeline div:before {
+    top: auto;
+    bottom: -24px;
+    left: -28px;
+  }
+}
+
+#timeline div:first-child {
+  margin-left: 0px;
+}
+
+#timeline div dt {
+  font-weight: 300;
+  text-transform: uppercase;
+  display: block;
+}
+
+#timeline div dd {
+  font-weight: 600;
+  display: block;
+  margin: 0;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #2D161E;
+  border-radius: 8px;
+  font: 1.2rem "Open Sans", sans-serif;
+}
+
+#visszajelzes div.field {
+  margin-bottom: 32px;
+}
+
+#program dt, dd {
+  display: inline-block;
+}
+
+#program dt {
+  width: 40%;
+}
+
+@media screen and (min-width: 760px) {
+  #program dt {
+    text-align: right;
+  }
+}
+
+#program dd {
+  width: 50%;
 }

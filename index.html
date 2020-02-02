@@ -66,39 +66,35 @@
       </div>
     </div>
   </section>
-  <section class="bg-tint">
+  <section class="bg-tint wide">
     <h2 class="section-pullup">Történetünk</h2>
-      <dl>
-          <div class="row">
-            <dt class="col">Találkoztunk</dt>
-            <dd class="col">2008.03.14.</dd>
-          </div>
-
-          <div class="row">
-            <dt class="col">Összejöttünk</dt>
-            <dd class="col">2008.10.10.</dd>
-          </div>
-
-          <div class="row">
-            <dt class="col">Összeköltöztünk</dt>
-            <dd class="col">2014.06.07.</dd>
-          </div>
-
-          <div class="row">
-            <dt class="col">Lánykérés</dt>
-            <dd class="col">2018.03.18.</dd>
-          </div>
-
-          <div class="row">
-            <dt class="col">Esküvő</dt>
-            <dd class="col">2020.10.10.</dd>
-          </div>
-      </dl>
+    <dl id="timeline">
+      <div>
+        <dt>Találkoztunk</dt>
+        <dd>2008. március 14.</dd>
+      </div>
+      <div>
+        <dt>Összejöttünk</dt>
+        <dd>2008. október 10.</dd>
+      </div>
+      <div>
+        <dt>Összeköltöztünk</dt>
+        <dd>2014. június 07.</dd>
+      </div>
+      <div>
+        <dt>Lánykérés</dt>
+        <dd>2018. március 18.</dd>
+      </div>
+      <div>
+        <dt>Esküvő</dt>
+        <dd>2020. október 10.</dd>
+      </div>
+    </dl>
   </section>
 
   <section id="nagynap">
     <h2>A nagy nap</h2>
-    <dl>
+    <dl id="program">
       <dt>15:30</dt>
       <dd>Érkezés és állófogadás</dd>
 
@@ -122,7 +118,7 @@
       <div class="col">
         <img align="right" src="./images/csillagkert-fotok.png" alt="">
       </div>
-      <div class="col">
+      <div class="col text-column">
         <p>
           <strong>Csillagkert Eseményközpont</strong>
         </p>
@@ -141,63 +137,75 @@
 
 
   </section>
-  <section class="map">
+  <section class="map fullbleed">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.3495026128767!2d18.935749899999998!3d47.541526100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d8aafc527f7f%3A0x301860df9990f580!2sPetneh%C3%A1zy%20Hussar%20Tavern!5e0!3m2!1sen!2suk!4v1579949266620!5m2!1shu!2shu" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
   </section>
 
   <section id='ajandek'>
     <h2>Ajándékozás</h2>
-    <section>
-      <h3>Nászajándék</h3>
-      <p>
-        Izlandi nászútunkra gyűjtünk. Ha szeretnél hozzájárulni, megköszönjük.
-      </p>
-    </section>
-    <section>
-      <h3>Menyecsketánc</h3>
-      <p>
-        Ne készülj pénzzel, hozz inkább egy sorsjegyet!
-      </p>
-    </section>
+    <div class="row">
+      <div class='col text-column text-center'>
+        <h3>Nászajándék</h3>
+        <p>
+          Izlandi nászútunkra gyűjtünk. Ha szeretnél hozzájárulni, megköszönjük.
+        </p>
+      </div>
+      <div class='col text-column text-center'>
+        <h3>Menyecsketánc</h3>
+        <p>
+          Ne készülj pénzzel, hozz inkább egy sorsjegyet!
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section id="rsvp" class="bg-tint">
+  <section id="visszajelzes" class="bg-tint">
     <h2 class="section-pullup">Visszajelzés</h2>
     <form action="#">
-      <div>
-        <label for="nev">Név</label><br>
-        <input id='nev' type="text" name="nev">
+      <div class="row">
+        <div class="col">
+          <div class='field'>
+            <label for="nev">Neved</label><br>
+            <input id='nev' type="text" name="nev">
+          </div>
+
+          <div class='field'>
+            <label for="rsvp">Eljössz -e?</label><br>
+            <input id='rsvp-jon' type="radio" name="rsvp">
+            <label for="rsvp-jon">Mindenképp ott leszek</label>
+            <br>
+            <input id='rsvp-nemjon' type="radio" name="rsvp">
+            <label for="rsvp-nemjon">Sajnos nem tudok eljönni</label>
+          </div>
+
+
+          <div class='field'>
+            <label for="">Egy kísérőt is hozok</label><br>
+            <input id='kisero-igen' type="radio" name="kisero">
+            <label for="kisero-igen">Igen</label>
+
+            <input id='kisero-nem' type="radio" name="kisero">
+            <label for="kisero-nem">Nem</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class='field'>
+            <label for="nev">Üzenet</label><br>
+            <textarea name="uzenet" id="uzi" cols="30" rows="5"></textarea>
+          </div>
+
+          <div class='field'>
+            <label for="dal">Dalkérés</label><br>
+            <input id='dal' type="text">
+          </div>
+
+        </div>
       </div>
 
-      <div>
-        <input id='rsvp-yes' type="radio" name="rsvp">
-        <label for="rsvp-yes">Mindenképp ott leszek</label>
-        <br>
-        <input id='rsvp-no' type="radio" name="rsvp">
-        <label for="rsvp-no">Sajnos nem tudok eljönni</label>
-      </div>
+      <center>
+        <input type="submit" value="Küldés!">
+      </center>
 
-
-      <div>
-        <label for="">Egy kísérőt is hozok</label><br>
-        <input id='p1-yes' type="radio" name="p1">
-        <label for="p1-yes">Igen</label>
-
-        <input id='p1-no' type="radio" name="p1">
-        <label for="p1-no">Nem</label>
-      </div>
-
-      <div>
-        <label for="nev">Üzenet</label><br>
-        <textarea name="uzenet" id="uzi" cols="30" rows="10"></textarea>
-      </div>
-
-      <div>
-        <label for="dal">Dalkérés</label><br>
-        <input id='dal' type="text">
-      </div>
-
-      <input type="submit" value="Küldés!">
 
     </form>
   </section>

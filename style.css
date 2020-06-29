@@ -363,7 +363,7 @@ a.action {
 
 section {
   padding-bottom: 24px;
-  padding: 0 20% 48px;
+  padding: 0 10% 48px;
 }
 
 section.wide {
@@ -474,11 +474,19 @@ section.bg-tint {
   margin: 0;
 }
 
+#timeline div dd em {
+  font-weight: normal;
+}
+
 input, textarea {
   padding: 8px;
   border: 1px solid #2D161E;
   border-radius: 8px;
   font: 1.2rem "Open Sans", sans-serif;
+}
+
+label {
+  margin-right: 24px;
 }
 
 #visszajelzes div.field {

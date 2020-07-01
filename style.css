@@ -163,7 +163,6 @@ body {
 }
 
 .hero-container {
-  width: 400px;
   margin: auto;
   padding: 0;
   border-style: dotted;
@@ -172,6 +171,12 @@ body {
   border-image-slice: 33% 33%;
   border-image-repeat: round;
   border-width: 10px;
+}
+
+@media screen and (min-width: 760px) {
+  .hero-container {
+    width: 400px;
+  }
 }
 
 .hero-container div {
@@ -198,7 +203,6 @@ h1 small {
 
 h2 {
   font: 300 3rem/1.5 "Princess Sofia", serif;
-  text-transform: lowercase;
 }
 
 h2.section-pullup {
@@ -386,6 +390,11 @@ section.bg-tint {
   padding: 16px;
 }
 
+.text-larger p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
 #clockdiv {
   font-size: 2em;
   display: flex;
@@ -432,8 +441,8 @@ section.bg-tint {
     padding-left: 0;
     margin-bottom: 0;
     display: inline-block;
-    height: 240px;
     padding-left: 16px;
+    padding-bottom: 48px;
     margin-left: 40px;
     border-left: 1px solid #a3bdcf;
   }
@@ -476,6 +485,11 @@ section.bg-tint {
 
 #timeline div dd em {
   font-weight: normal;
+}
+
+#timeline-photos {
+  margin-top: 48px;
+  width: 100%;
 }
 
 input, textarea {

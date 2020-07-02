@@ -93,7 +93,7 @@ h2.section-pullup {
 }
 h3 {  font: 300 1rem /1.2 $font-body; text-transform: uppercase;  letter-spacing: 2px; }
 p {
-  font: 300 1rem/1.2 $font-body;
+  font: 300 1rem/1.4 $font-body;
   font-style: italic;
   letter-spacing: 0.3px;
 }
@@ -223,7 +223,11 @@ section.bg-tint {
 
 .text-center { text-align: center; }
 .text-column { padding: 16px; }
-.text-larger p { font-size: 1.2em; line-height: 1.5;}
+
+
+@media screen and (min-width : $bp-mobile) {
+  .text-larger p { font-size: 1.2em; line-height: 1.5;}
+}
 
 
 #clockdiv {

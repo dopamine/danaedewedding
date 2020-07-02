@@ -73,6 +73,14 @@ body { font: 300 1rem /1.6 $font-body; color: $c-text; background-color: #fff ; 
   margin-top: -10px;
 }
 
+
+@media screen and (min-width : $bp-mobile) {
+  .hero-container h1 {
+    font-size:2.8rem;
+  }
+}
+
+
 h1, h2, h3 { text-align: center; color : $c-text-heading; }
 
 h1 {  font: 300 3rem /1.4 $font-display;}

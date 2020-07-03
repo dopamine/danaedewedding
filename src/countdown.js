@@ -2,7 +2,7 @@
 // https://codepen.io/yunusekim/pen/eYYBzWm
 
 // Set Date
-var countDownDate = new Date("Oct 10, 2020 21:00:00").getTime();
+var countDownDate = new Date("Oct 10, 2020 16:15:00").getTime();
 
 // CountDown Action
 var x = setInterval(function() {
